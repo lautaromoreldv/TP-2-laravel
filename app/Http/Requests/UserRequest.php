@@ -23,13 +23,13 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        /*return [
+        return [
             'name'      => 'required | min:2 | max:64',
             'title_job' => 'required | min:2 | max:32',
             'address'   => 'min:10 | max:100',
             'tel'       => 'required | numeric | min:10',
             'email'     => 'required | email | min:5 | max:100',
             'file'      => 'image:jpg | image:png | image:jpeg | max:5000'
-        ];*/
+        ];
     }
 }
