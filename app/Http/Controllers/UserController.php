@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\About;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -19,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::with('education', 'skill', 'about', 'proskill')->latest()->get();
+        $users = User::with('education', 'trabajo', 'skill', 'about', 'proskill')->latest()->get();
         return view('admin.users.index', compact('users'));
     }
 

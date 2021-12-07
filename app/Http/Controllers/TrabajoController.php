@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Education;
+use App\Models\Trabajo;
 use Illuminate\Http\Request;
 
-class EducationController extends Controller
+class TrabajoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,16 +36,17 @@ class EducationController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $education = Education::create([
-            'school_name'    => $data['school_name'],
+        $trabajo = Trabajo::create([
+            'trabajo'    => $data['trabajo'],
             'user_id' => intval($data['user_id']),
-            'degree' => $data['degree'],
+            'lugar' => $data['lugar'],
             'start_date'  => $data['start_date'],
             'finish_date'  => $data['finish_date'],
-            'description'  => $data['description'],
+            'responsabilidades'  => $data['responsabilidades'],
         ]);
-        $education->save();
-        return redirect()->to('usuario/'.$data['user_id'].'/edit')->with('ok', 'Se creó una nueva educacion');
+        $trabajo->save();
+        return redirect()->to('usuario/'.$data['user_id'].'/edit')->with('ok', 'Se creó un nuevo trabajo');
+    
     }
 
     /**
@@ -77,10 +78,11 @@ class EducationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Education $education)
+    public function update(Request $request, Trabajo $trabajo)
     {
-        $education->update($request->all());
-        return redirect()->to('usuario/'.$education->user_id.'/edit')->with('edit', 'Se editó una educación');
+        $trabajo->update($request->all());
+        return redirect()->to('usuario/'.$trabajo->user_id.'/edit')->with('edit', 'Se editó un nuevo trabajo');
+    
     }
 
     /**
@@ -89,12 +91,12 @@ class EducationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Education $education)
+    public function destroy(Trabajo $trabajo)
     {
-        $id = $education->user_id;
-        $education = Education::find($education->id);
-        $education->delete();
+        $id = $trabajo->user_id;
+        $trabajo = Trabajo::find($trabajo->id);
+        $trabajo->delete();
 
-        return redirect()->to('usuario/'.$id.'/edit')->with('error', 'Se borró una educación');
+        return redirect()->to('usuario/'.$id.'/edit')->with('error', 'Se borró un trabajo');
     }
 }

@@ -1,4 +1,4 @@
-<form action="{{ route('work.store') }}" method="POST">
+<form action="{{ route('trabajo.store') }}" method="POST">
     <div class="form-row">
         <div class="col-md">
             <label class="block text-gray-700 text-sm font-bold mb-2" >

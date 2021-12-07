@@ -8,6 +8,12 @@
                                     Título Professional Skills
                                 </label>
                                 <input id="pro" type="text"  name="pro" class="form-control" value="{{ old('pro', $usuario->pro) }}">
+
+                                 <!--inputs del usuario en hidden asi no tira error al actualizar un dato que es del usuario pero es para cambiar el titulo del titulo Professional Skills-->
+                                <input id="name" type="hidden"  name="name" class="form-control" value="{{ old('name', $usuario->name) }}">
+                                <input id="title_job" type="hidden"  name="title_job" class="form-control" value="{{ old('title_job', $usuario->title_job) }}">
+                                <input id="email" type="hidden"  name="email" class="form-control" value="{{ old('email', $usuario->email) }}">
+                                <input id="tel" type="hidden"  name="tel" class="form-control" value="{{ old('tel', $usuario->tel) }}">
                             </div>
                     </div>
                     @csrf

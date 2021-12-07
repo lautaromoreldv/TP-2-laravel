@@ -1,4 +1,3 @@
-<div class="row">
 <form action="{{ route('usuario.update', $usuario) }}"
                     enctype="multipart/form-data"
                     method="POST">
@@ -65,9 +64,20 @@
                                 </div>
                             @enderror
                             </div>
-                            
 
-                            <div class="col-md-7 mt-3">
+                            <div class="col-md-6">
+                                    <p class="mt-3">Redes sociales:</p>
+                                    <label class="text-gray-700 text-sm font-bold mb-2" >Facebook</label>
+                                    <input id="fb" type="text"  name="fb" class="form-control" value="{{ old('fb', $usuario->fb) }}">
+                                    <label class="text-gray-700 text-sm font-bold mb-2" >Twitter</label>
+                                    <input id="tw" type="text"  name="tw" class="form-control" value="{{ old('tw', $usuario->tw) }}">
+                                    <label class="text-gray-700 text-sm font-bold mb-2" >Github</label>
+                                    <input id="gh" type="text"  name="gh" class="form-control" value="{{ old('gh', $usuario->gh) }}">
+                                    <label class="text-gray-700 text-sm font-bold mb-2" >Dribble</label>
+                                    <input id="db" type="text"  name="db" class="form-control" value="{{ old('db', $usuario->db) }}">
+                            </div>
+
+                            <div class="col-md-6 mt-3">
                                 @if($usuario->image)
                                     <img src="{{ old('file', $usuario->get_image) }}" class="img-fluid">
                                     @else
@@ -80,32 +90,24 @@
                                     </div>
                                 @enderror
                             </div>
+
+
                     </div>
                     @csrf
                     @method('PUT')
 
                     <button type="submit" class="btn btn-info mt-3">Guardar Cambios</button>
         </form>
-                    <div class="col-8">
+    
+                    <!--<div class="col-8">
                         <form action="{{ route('usuario.update', $usuario) }}"
                         method="POST">
-                                <div class="col-md-8">
-                                    <p class="mt-3">Redes sociales:</p>
-                                    <label class="text-gray-700 text-sm font-bold mb-2" >Facebook</label>
-                                    <input id="fb" type="text"  name="fb" class="form-control" value="{{ old('fb', $usuario->fb) }}">
-                                    <label class="text-gray-700 text-sm font-bold mb-2" >Twitter</label>
-                                    <input id="tw" type="text"  name="tw" class="form-control" value="{{ old('tw', $usuario->tw) }}">
-                                    <label class="text-gray-700 text-sm font-bold mb-2" >Github</label>
-                                    <input id="gh" type="text"  name="gh" class="form-control" value="{{ old('gh', $usuario->gh) }}">
-                                    <label class="text-gray-700 text-sm font-bold mb-2" >Dribble</label>
-                                    <input id="db" type="text"  name="db" class="form-control" value="{{ old('db', $usuario->db) }}">
-                                </div>
+                                
                         @csrf
                         @method('PUT')
 
                         <button type="submit" class="btn btn-info mt-3 mb-3">Actualizar</button>
                         </form>
                     </div>
-                       
-                       
-</div>
+                </div>-->
+                

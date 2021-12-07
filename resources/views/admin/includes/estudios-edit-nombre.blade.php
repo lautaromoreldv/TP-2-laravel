@@ -1,15 +1,14 @@
-
 <form action="{{ route('usuario.update', $usuario) }}"
                     method="POST"
                     enctype="multipart/form-data">
                     <div class="row">
                             <div class="col-md-12 mb-2">
                                 <label class="text-gray-700 text-sm font-bold mb-2" >
-                                    Título Technical Skills
+                                    Título de Educación
                                 </label>
-                                <input id="tec" type="text"  name="tec" class="form-control" value="{{ old('tec', $usuario->tec) }}">
+                                <input id="edu" type="text"  name="edu" class="form-control" value="{{ old('edu', $usuario->edu) }}">
                             </div>
-                            <!--inputs del usuario en hidden asi no tira error al actualizar un dato que es del usuario pero es para cambiar el titulo del titulo Technical Skills-->
+                            <!--inputs del usuario en hidden asi no tira error al actualizar un dato que es del usuario pero es para cambiar el titulo de educacion-->
                                 <input id="name" type="hidden"  name="name" class="form-control" value="{{ old('name', $usuario->name) }}">
                                 <input id="title_job" type="hidden"  name="title_job" class="form-control" value="{{ old('title_job', $usuario->title_job) }}">
                                 <input id="email" type="hidden"  name="email" class="form-control" value="{{ old('email', $usuario->email) }}">

@@ -34,6 +34,14 @@ class User extends Authenticatable
         'address',
         'tel',
         'email',
+        'tec',
+        'pro',
+        'work',
+        'edu',
+        'fb',
+        'tw',
+        'gh',
+        'db',
         'password',
     ];
 
@@ -87,10 +95,6 @@ class User extends Authenticatable
         return $this->hasMany(Proskill::class, 'user_id', 'id');
     }
 
-    public function work(){
-        return $this->hasMany(Work::class, 'user_id', 'id');
-    }
-
     public function features(){
         return $this->hasMany(Features::class, 'user_id', 'id');
     }
@@ -107,6 +111,9 @@ class User extends Authenticatable
         return $this->hasMany(Titulo::class, 'user_id', 'id');
     }
 
+    public function trabajo(){
+        return $this->hasMany(Trabajo::class, 'user_id', 'id');
+    }
 
     public function getGetImageAttribute($key)
     {

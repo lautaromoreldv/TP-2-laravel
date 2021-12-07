@@ -12,7 +12,7 @@
                         <img src="https://picsum.photos/400/200/" class="card-img-top" alt="Card image cap">
                     @endif
                 <h5 class="card-title">{{ $user->name }}</h5>
-                <p class="card-text">{{ $user->title_job }}</p>
+                <p class="card-text">{{ $user->email }}</p>
                 <form action="{{ route('usuario.destroy', $user) }}" method="POST">
                     <a href="{{ route('usuario.edit', $user) }}" class="btn btn-outline-warning">Editar</a>
                     @csrf

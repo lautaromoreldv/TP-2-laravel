@@ -297,10 +297,10 @@
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-work">
-                                 <h3>{{ $user->works }}</h3>
+                                 <h3>{{ $user->work }}</h3>
                                 <div class="mh-experience-deatils">
-                                    <!-- Education Institutes-->
-                                    @foreach($user->work as $work)
+                                    <!-- Work-->
+                                @foreach($user->trabajo as $work)
                                     <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                         <h4>{{ $work->trabajo }} <a href="#">{{ $work->lugar }}</a></h4>
                                         <div class="mh-eduyear">{{ $work->start_date }} - {{ $work->finish_date }}</div>
@@ -309,7 +309,7 @@
                                             <li><i class="fa fa-circle"></i>{{ $work->responsabilidades }}</li>
                                         </ul>
                                     </div>                                
-                                    @endforeach
+                                @endforeach
                                 </div>
                             </div>
                         </div>

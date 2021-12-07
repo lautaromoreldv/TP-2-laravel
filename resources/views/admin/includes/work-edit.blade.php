@@ -1,5 +1,5 @@
-@foreach($usuario->work as $work)
-                    <form action="{{ route('work.update', $work) }}"
+@foreach($usuario->trabajo as $work)
+                    <form action="{{ route('trabajo.update', $work) }}"
                     method="POST">
                         <div class="form-row">
                             <div class="col-md">
@@ -32,7 +32,7 @@
                         </div>
                     </form>
 
-                    <form action="{{ route('work.destroy', $work) }}" method="POST">
+                    <form action="{{ route('trabajo.destroy', $work) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <div class="mt-2 mb-2">
@@ -40,4 +40,4 @@
                         </div>
                     </form>
 
-                @endforeach
+@endforeach

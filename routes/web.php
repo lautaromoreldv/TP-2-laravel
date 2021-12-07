@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Skill;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\User;
@@ -10,8 +9,7 @@ use App\Http\Controllers\TituloController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProSkillController;
 use App\Http\Controllers\EducationController;
-use App\Http\Controllers\WorksController;
-use App\Models\TitlesSkills;
+use App\Http\Controllers\TrabajoController;
 use Spatie\Permission\Models\Role;
 
 
@@ -32,7 +30,7 @@ Route::get('/', function () {
 
 
 Route::get('/portfolio/{slug}', function($slug){
-    $user = User::with('about')->with('education')->with('features')->with('hago')->with('skill')->with('proskill')->with('proyects')->with('reviews')->with('skill')->with('work')->where('slug', $slug)->first();
+    $user = User::with('about')->with('education')->with('features')->with('hago')->with('skill')->with('proskill')->with('proyects')->with('reviews')->with('skill')->with('trabajo')->where('slug', $slug)->first();
     if($user){
         return view('portfolio')->with('user', $user);
     }
@@ -47,7 +45,7 @@ Route::resource('about', AboutController::class);
 Route::resource('titulo', tituloController::class);
 Route::resource('proskill', ProSkillController::class);
 Route::resource('education', EducationController::class);
-Route::resource('work', WorksController::class);
+Route::resource('trabajo', TrabajoController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

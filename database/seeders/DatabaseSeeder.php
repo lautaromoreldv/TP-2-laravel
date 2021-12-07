@@ -9,12 +9,11 @@ use App\Models\Education;
 use App\Models\About;
 use App\Models\Hago;
 use App\Models\Proskill;
-use App\Models\Work;
 use App\Models\Features;
 use App\Models\Reviews;
 use App\Models\Proyects;
-use App\Models\TitlesSkills;
 use App\Models\Titulo;
+use App\Models\Trabajo;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,11 +30,11 @@ class DatabaseSeeder extends Seeder
         About::factory(10)->create();
         Hago::factory(10)->create();
         Proskill::factory(15)->create();
-        Work::factory(15)->create();
         Features::factory(15)->create();
         Reviews::factory(10)->create();
         Proyects::factory(10)->create();
         Titulo::factory(10)->create();
+        Trabajo::factory(15)->create();
         
     }
 }

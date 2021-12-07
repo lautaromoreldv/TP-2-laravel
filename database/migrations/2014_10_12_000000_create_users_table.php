@@ -23,10 +23,10 @@ class CreateUsersTable extends Migration
             $table->string('tel')->nullable();
             $table->text('excerpt')->nullable();
             $table->string('email')->unique();
+            $table->string('work')->nullable();
             $table->string('tec')->nullable();
             $table->string('pro')->nullable();
             $table->string('edu')->nullable();
-            $table->string('works')->nullable();
             $table->string('tw')->nullable();
             $table->string('fb')->nullable();
             $table->string('gh')->nullable();

@@ -76,8 +76,8 @@
               
                   <div class="d-flex align-items-start">
                       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active" id="v-pills-nuevo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nuevo" type="button" role="tab" aria-controls="v-pills-nuevo" aria-selected="true">Crear Titulo</button>
-                        <button class="nav-link" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab" aria-controls="v-pills-editar" aria-selected="false">Editar Titulo</button>
+                        <button class="nav-link active" id="v-pills-nuevo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nuevo" type="button" role="tab" aria-controls="v-pills-nuevo" aria-selected="true">Crear Habilidad Pro</button>
+                        <button class="nav-link" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab" aria-controls="v-pills-editar" aria-selected="false">Editar Habilidad Pro</button>
                         <button class="nav-link" id="v-pills-nombre1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nombre1" type="button" role="tab" aria-controls="v-pills-nombre1" aria-selected="false">Editar nombre de Professional Skills</button>
                       </div>
                       <div class="tab-content" id="v-pills-tabContent">
@@ -131,6 +131,7 @@
                       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active" id="v-pills-newestudio-tab" data-bs-toggle="pill" data-bs-target="#v-pills-newestudio" type="button" role="tab" aria-controls="v-pills-newestudio" aria-selected="true">Crear education</button>
                         <button class="nav-link" id="v-pills-editestudio-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editestudio" type="button" role="tab" aria-controls="v-pills-editestudio" aria-selected="false">Editar educacion</button>
+                        <button class="nav-link" id="v-pills-cambiar-edu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cambiar-edu" type="button" role="tab" aria-controls="v-pills-cambiar-edu" aria-selected="false">Cambiar título de Educación</button>
                       </div>
 
                       <div class="tab-content" id="v-pills-tabContent">
@@ -140,6 +141,9 @@
                         </div>
                         <div class="tab-pane fade" id="v-pills-editestudio" role="tabpanel" aria-labelledby="v-pills-editestudio-tab">
                               @include('admin.includes.estudios-edit')
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-cambiar-edu" role="tabpanel" aria-labelledby="v-pills-cambiar-edu-tab">
+                              @include('admin.includes.estudios-edit-nombre')
                         </div>
                       </div>
                     </div>
@@ -152,7 +156,8 @@
                 <div class="d-flex align-items-start">
                       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active" id="v-pills-newtrabajo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-newtrabajo" type="button" role="tab" aria-controls="v-pills-newtrabajo" aria-selected="true">Crear trabajo</button>
-                        <button class="nav-link" id="v-pills-edittrabajo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-edittrabajo" type="button" role="tab" aria-controls="v-pills-edittrabajo" aria-selected="false">Editar educacion</button>
+                        <button class="nav-link" id="v-pills-edittrabajo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-edittrabajo" type="button" role="tab" aria-controls="v-pills-edittrabajo" aria-selected="false">Editar trabajo</button>
+                        <button class="nav-link" id="v-pills-cambiarwork-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cambiarwork" type="button" role="tab" aria-controls="v-pills-cambiarwork" aria-selected="false">Cambiar título de Trabajo</button>
                       </div>
 
                       <div class="tab-content" id="v-pills-tabContent">
@@ -162,6 +167,9 @@
                         </div>
                         <div class="tab-pane fade" id="v-pills-edittrabajo" role="tabpanel" aria-labelledby="v-pills-edittrabajo-tab">
                               @include('admin.includes.work-edit')
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-cambiarwork" role="tabpanel" aria-labelledby="v-pills-cambiarwork-tab">
+                              @include('admin.includes.work-edit-nombre')
                         </div>
                       </div>
                     </div>
